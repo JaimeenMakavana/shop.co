@@ -12,6 +12,7 @@ import {
   PiInstagramLogoThin,
   PiTwitterLogoThin,
 } from "react-icons/pi";
+import FooterCard from "./FooterCard";
 
 const SocialMediaData = [
   { icon: <PiTwitterLogoThin />, href: "/" },
@@ -28,7 +29,8 @@ const FooterData = [
 ];
 const Footer = () => {
   return (
-    <div className=" bg-lightGrey grid grid-cols-2 px-[16px]">
+    <div className=" bg-lightGrey grid grid-cols-2 px-[16px] relative pt-[120px] mt-[150px]">
+      <FooterCard />
       <div className="col-span-full flex flex-col h-[100px] justify-between py-4">
         <p className=" font-bold">SHOP.CO</p>
         <p className=" text-sm text-gray-500 mb-2">

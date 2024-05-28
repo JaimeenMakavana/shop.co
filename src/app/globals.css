@@ -11,12 +11,19 @@ body {
   box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .btn {
+    @apply text-black w-full py-2 rounded-full text-sm;
+  }
+  .btn-gr {
+    @apply bg-lightGrey;
+  }
+
+  /* card */
+  .card {
+    @apply p-[18px] rounded-xl;
   }
 }
-
 /* font family */
 .outfit {
   font-family: "Outfit", sans-serif;

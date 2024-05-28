@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header className="fixed top-[20px] h-[50px] inset-x-0 flex justify-between items-center px-[16px] bg-white">
+    <header className="fixed top-[20px] h-[50px] inset-x-0 flex justify-between items-center px-[16px] bg-white z-[5]">
       <div className=" inline-flex justify-start items-center gap-2">
         <MobileMenu />
         <span className=" font-bold">SHOP.CO</span>
