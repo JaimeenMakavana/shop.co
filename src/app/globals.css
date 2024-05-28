@@ -10,18 +10,37 @@
 body {
   box-sizing: border-box;
 }
-
+/* @layer utilities {
+  h1 {
+    @apply baiJamjuree text-white text-[26px] font-semibold;
+  }
+} */
 @layer components {
   .btn {
-    @apply text-black w-full py-2 rounded-full text-sm;
+    @apply text-black w-full py-2 rounded-full text-sm hover:opacity-80;
   }
   .btn-gr {
     @apply bg-lightGrey;
   }
-
+  .btn-black {
+    @apply bg-black text-white;
+  }
+  .btn-border {
+    @apply border border-gray-500;
+  }
   /* card */
   .card {
     @apply p-[18px] rounded-xl;
+  }
+  /* heading */
+  .lHeading {
+    @apply baiJamjuree text-white text-[26px] font-semibold;
+  }
+  .mHeading {
+    @apply uppercase font-medium;
+  }
+  .paragraph {
+    @apply text-gray-500 text-sm;
   }
 }
 /* font family */

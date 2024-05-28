@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="outfit">
         <Banner />
         <Header />
-        <div className="mt-[70px] px-[16px]">{children}</div>
+        <div className="mt-[70px]">{children}</div>
         <Footer />
       </body>
     </html>

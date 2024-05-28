@@ -3,10 +3,8 @@ import { CiMail } from "react-icons/ci";
 
 const FooterCard = () => {
   return (
-    <div className="grid md:grid-cols-2 bg-black absolute top-0 inset-x-[16px] card">
-      <p className="baiJamjuree text-white text-[26px] font-semibold">
-        STAY UPTO DATE ABOUT OUR LATEST OFFERS
-      </p>
+    <div className="grid md:grid-cols-2 bg-black absolute -top-[120px] inset-x-[16px] card">
+      <h1 className="lHeading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
       <div className=" space-y-2">
         <div className=" relative rounded-full overflow-hidden">
           <CiMail className=" absolute left-2 top-[10px]" />

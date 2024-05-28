@@ -22,9 +22,9 @@ export const FooterMenu = ({
 }) => {
   return (
     <div className=" py-2">
-      <h1 className=" uppercase font-medium text-lg">{menu}</h1>
+      <h1 className="mHeading">{menu}</h1>
       {subMenu.map((ele: any, index: any) => (
-        <p key={index} className=" text-gray-500 text-sm hover:underline">
+        <p key={index} className="text-gray-500 text-sm hover:underline">
           {ele.title}
         </p>
       ))}
