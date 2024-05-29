@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="outfit">
+      <body className="outfit scrolls">
         <Banner />
         <Header />
         <div className="mt-[70px]">{children}</div>

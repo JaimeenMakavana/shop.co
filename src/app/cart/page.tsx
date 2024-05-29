@@ -65,7 +65,7 @@ const page = () => {
     <div className="px-[16px] py-[16px]">
       <Breadcrumb />
       <h1 className=" lHeading font-bold text-black  py-3">Your Cart</h1>
-      <div className=" card border space-y-4 divide-y max-h-[520px] overflow-y-auto scrolls">
+      <div className=" card border space-y-4 divide-y max-h-[520px] overflow-y-auto scrollRemove">
         <CartCard />
         <CartCard />
         <CartCard />

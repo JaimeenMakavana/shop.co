@@ -6,9 +6,10 @@ import {
   PiUserCircleThin,
 } from "react-icons/pi";
 import { useOutsideClick } from "@prismane/core/hooks";
+import Link from "next/link";
 
 const SearchBar = () => {
-  const [SearchBarToggle, setSearchBarToggle] = useState(false);
+  const [SearchBarToggle, setSearchBarToggle] = useState(true);
   //   handle outside click
   const ref = useRef(null);
   useOutsideClick(ref, () => {
@@ -22,7 +23,9 @@ const SearchBar = () => {
             className={`size-[20px]`}
             onClick={() => setSearchBarToggle(!SearchBarToggle)}
           />
-          <PiShoppingCartSimpleThin className=" size-[20px]" />
+          <Link href="/cart">
+            <PiShoppingCartSimpleThin className=" size-[20px]" />
+          </Link>
           <PiUserCircleThin className=" size-[20px]" />
         </>
       ) : (
