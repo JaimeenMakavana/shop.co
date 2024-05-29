@@ -9,13 +9,13 @@ import MobileMenuWrapper from "./MobileMenuWrapper";
 import MobileMenuPage from "./MobileMenuPage";
 
 const MobileMenu = () => {
-  const [MobileToggle, setMobileToggle] = useState(false);
+  const [MobileToggle, setMobileToggle] = useState(true);
   return (
     <div>
       <RxHamburgerMenu onClick={() => setMobileToggle(!MobileToggle)} />
       {/* menu*/}
       <MobileMenuWrapper
-        MobileToggle={!MobileToggle}
+        MobileToggle={MobileToggle}
         setMobileToggle={setMobileToggle}
       >
         {MobileMenuPageData.map((ele: any, index: any) => (

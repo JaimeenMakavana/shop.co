@@ -14,7 +14,7 @@ const DressCardData = [
 
 const DressCard = ({ name, url }: { name: string; url: any }) => {
   return (
-    <div className=" w-[240px] h-[150px] rounded-xl overflow-hidden relative">
+    <div className=" w-[240px] h-[150px] rounded-xl overflow-hidden relative hover:shadow-[2px_2px_1px_black] transition-all duration-300 cursor-pointer">
       <p className=" absolute left-3 top-3 font-semibold">{name}</p>
       <Image
         src={url}
@@ -22,7 +22,7 @@ const DressCard = ({ name, url }: { name: string; url: any }) => {
         width={290}
         height={190}
         quality={100}
-        className=" object-cover right-0"
+        className=" object-cover object-bottom right-0"
       />
     </div>
   );

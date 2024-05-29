@@ -1,21 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
 import ArrivalImg from "/public/image/arrival1.png";
 import { Rating } from "react-simple-star-rating";
-const ArrivalCard = () => {
-  const [rating, setRating] = useState(0);
-
-  // Catch Rating value
-  const handleRating = (rate: number) => {
-    setRating(rate);
-  };
-  // Optinal callback functions
-  const onPointerEnter = () => console.log("Enter");
-  const onPointerLeave = () => console.log("Leave");
-  const onPointerMove = (value: number, index: number) =>
-    console.log(value, index);
-
+import { NewArrivalDataconst } from "./HomeStatic";
+const ArrivalCard = ({ data }: { data: any }) => {
   return (
     <div className=" shrink-0">
       <div className="size-[200px] rounded-xl overflow-hidden">
@@ -27,35 +15,24 @@ const ArrivalCard = () => {
           className=" object-cover"
         />
       </div>
-      <p className=" mHeading text-sm py-1">T-SHIRT WITH TAPE DETAILS</p>
+      <p className=" mHeading text-sm py-1">{data.title}</p>
       <div className=" flex justify-start items-center gap-2">
-        <Rating
-          size={20}
-          onClick={handleRating}
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-          onPointerMove={onPointerMove}
-          emptyClassName=""
-        />
-        <p className=" text-xs mt-1">4.5/5</p>
+        <Rating size={20} />
+        <p className=" text-xs mt-1">{data.rating}/5</p>
       </div>
-      <p className=" mHeading">$200</p>
+      <p className=" mHeading">${data.price}</p>
     </div>
   );
 };
 
-const ShoppingCardComponent = ({ name }: { name: string }) => {
+const ShoppingCardComponent = ({ name, data }: { name: string; data: any }) => {
   return (
     <div className="px-[16px] py-[16px] space-y-2">
       <h1 className="lHeading text-black text-center py-2">{name}</h1>
       <div className=" flex justify-start overflow-x-scroll gap-3 scrolls">
-        <ArrivalCard />
-        <ArrivalCard />
-        <ArrivalCard />
-        <ArrivalCard />
-        <ArrivalCard />
-        <ArrivalCard />
-        <ArrivalCard />
+        {data.map((ele: any) => (
+          <ArrivalCard key={ele.id} data={ele} />
+        ))}
       </div>
       <button className=" btn btn-border">View All</button>
     </div>
