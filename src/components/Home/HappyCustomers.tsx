@@ -105,7 +105,7 @@ const ReviewHeader = ({
 
 const ReviewCard = ({ data }: { data: any }) => {
   return (
-    <div className=" rounded-xl border border-gray-200 p-3 space-y-2">
+    <div className=" rounded-xl border border-gray-200 p-3 space-y-2 min-h-[192px]">
       <div className=" flex justify-start items-center gap-2">
         <Rating size={20} />
       </div>

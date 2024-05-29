@@ -4,7 +4,7 @@ const SocialMediaIcon = ({ icon, href = "/" }: { icon: any; href: string }) => {
   return (
     <Link
       href={href}
-      className=" text-[20px] border p-[2px] rounded-full overflow-hidden hover:bg-black hover:text-white cursor-pointer"
+      className=" text-[20px] border p-[4px] rounded-full overflow-hidden hover:bg-black hover:text-white cursor-pointer"
     >
       {icon}
     </Link>
