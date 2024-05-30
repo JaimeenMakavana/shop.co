@@ -2,11 +2,23 @@
 import Image from "next/image";
 import ArrivalImg from "/public/image/arrival1.png";
 import { Rating } from "react-simple-star-rating";
-import { NewArrivalDataconst } from "./HomeStatic";
-const ArrivalCard = ({ data }: { data: any }) => {
+import { twMerge } from "tailwind-merge";
+
+export const ArrivalCard = ({
+  data,
+  imageClass,
+}: {
+  data: any;
+  imageClass?: string;
+}) => {
   return (
     <div className=" shrink-0">
-      <div className="size-[200px] rounded-xl overflow-hidden">
+      <div
+        className={twMerge(
+          `size-[200px] rounded-xl overflow-hidden`,
+          imageClass
+        )}
+      >
         <Image
           src={ArrivalImg}
           width={200}
@@ -29,7 +41,7 @@ const ShoppingCardComponent = ({ name, data }: { name: string; data: any }) => {
   return (
     <div className="px-[16px] py-[16px] space-y-2">
       <h1 className="lHeading text-black text-center py-2">{name}</h1>
-      <div className=" flex justify-start overflow-x-scroll gap-3 scrolls">
+      <div className=" flex justify-start overflow-x-scroll gap-3 scrollRemove">
         {data.map((ele: any) => (
           <ArrivalCard key={ele.id} data={ele} />
         ))}
