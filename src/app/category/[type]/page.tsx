@@ -38,6 +38,7 @@ const BottomDrawer = () => {
         open={openBottom}
         onClose={closeDrawerBottom}
         className="p-4"
+        size={400}
       >
         <button onClick={() => setOpenBottom(!openBottom)}>Close</button>
         <div className="h-full w-full overflow-y-auto pb-6 scrollRemove">
