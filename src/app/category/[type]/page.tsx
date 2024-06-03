@@ -1,9 +1,8 @@
 "use client";
+import BottomDrawer from "@/components/Category/BottomDrawer";
 import { NewArrivalDataconst } from "@/components/Home/HomeStatic";
 import { ArrivalCard } from "@/components/Home/NewArrival";
-import { Drawer } from "@material-tailwind/react";
-import React, { useState } from "react";
-import { GiSettingsKnobs } from "react-icons/gi";
+import React, { useEffect, useState } from "react";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 import ReactPaginate from "react-paginate";
 
@@ -21,67 +20,6 @@ const PaginationLabel = ({
       <p className={` ${order} text-xs`}>{label}</p>
       <p>{icon}</p>
     </div>
-  );
-};
-
-const BottomDrawer = () => {
-  const [openBottom, setOpenBottom] = useState(false);
-  const openDrawerBottom = () => setOpenBottom(true);
-  const closeDrawerBottom = () => setOpenBottom(false);
-  return (
-    <>
-      <span>
-        <GiSettingsKnobs onClick={openDrawerBottom} />
-      </span>
-      <Drawer
-        placement="bottom"
-        open={openBottom}
-        onClose={closeDrawerBottom}
-        className="p-4"
-        size={400}
-      >
-        <button onClick={() => setOpenBottom(!openBottom)}>Close</button>
-        <div className="h-full w-full overflow-y-auto pb-6 scrollRemove">
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p className=" text-red-800">Lorem, ipsum dolor.</p>
-        </div>
-      </Drawer>
-    </>
   );
 };
 
