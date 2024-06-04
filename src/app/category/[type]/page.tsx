@@ -37,8 +37,8 @@ const Page = () => {
   };
   return (
     <div className=" px-[16px] py-[16px]">
-      <h1 className="w-full inline-flex justify-between items-center sticky top-[67px] inset-x-0 bg-white z-[1] shadow-sm">
-        <span className=" inline-flex justify-start items-center gap-1 ">
+      <h1 className="flex justify-between items-center sticky top-[67px] left-0 right-0 bg-white z-[1] border-b ">
+        <span className=" inline-flex justify-start items-center gap-1">
           <span className=" lHeading text-black font-semibold">Casual </span>{" "}
           <span className=" text-gray-400 text-xs  ">
             Showing 1-10 of 100 Products
@@ -69,6 +69,7 @@ const Page = () => {
         renderOnZeroPageCount={null}
         pageClassName="rounded-full hover:bg-gray-300 px-2"
         className="flex justify-between items-center"
+        activeClassName="rounded-full bg-gray-300 px-2"
       />
     </div>
   );
