@@ -44,7 +44,7 @@ const BottomDrawer: React.FC = () => {
         placement="bottom"
         open={openBottom}
         onClose={closeDrawerBottom}
-        className="rounded-t-xl"
+        className="rounded-t-xl p-4"
         size={400}
         placeholder=""
         onPointerEnterCapture={() => {}}
