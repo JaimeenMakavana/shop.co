@@ -44,8 +44,11 @@ const BottomDrawer: React.FC = () => {
         placement="bottom"
         open={openBottom}
         onClose={closeDrawerBottom}
-        className="p-4 rounded-t-xl"
+        className="rounded-t-xl"
         size={400}
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
       >
         <>
           <div className=" flex justify-between items-center shadow-sm">
