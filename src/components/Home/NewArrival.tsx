@@ -3,6 +3,7 @@ import Image from "next/image";
 import ArrivalImg from "/public/image/arrival1.png";
 import { Rating } from "react-simple-star-rating";
 import { twMerge } from "tailwind-merge";
+import { usePathname, useRouter } from "next/navigation";
 
 export const ArrivalCard = ({
   data,
@@ -11,13 +12,16 @@ export const ArrivalCard = ({
   data: any;
   imageClass?: string;
 }) => {
+  const router = useRouter();
+  const pathname = usePathname();
   return (
     <div className=" shrink-0">
       <div
         className={twMerge(
-          `size-[200px] rounded-xl overflow-hidden`,
+          `size-[200px] rounded-xl overflow-hidden cursor-pointer`,
           imageClass
         )}
+        onClick={() => router.push(`${pathname}/${data.title}`)}
       >
         <Image
           src={ArrivalImg}
