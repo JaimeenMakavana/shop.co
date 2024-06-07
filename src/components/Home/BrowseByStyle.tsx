@@ -17,17 +17,19 @@ const DressCard = ({ name, url }: { name: string; url: any }) => {
   const router = useRouter();
   return (
     <div
-      className=" w-[240px] h-[150px] rounded-xl overflow-hidden relative hover:shadow-[2px_2px_1px_black] transition-all duration-300 cursor-pointer"
+      className=" w-[240px] h-[150px] rounded-xl group overflow-hidden relative hover:shadow-sm transition-all duration-300 cursor-pointer"
       onClick={() => router.push(`/category/${name}`)}
     >
-      <p className=" absolute left-3 top-3 font-semibold">{name}</p>
+      <p className=" absolute left-3 top-3 font-semibold group-hover:absolute">
+        {name}
+      </p>
       <Image
         src={url}
         alt="dress"
         width={290}
         height={190}
         quality={100}
-        className=" object-cover object-bottom right-0"
+        className=" object-cover transition-all duration-500 group-hover:scale-105 object-bottom right-0"
       />
     </div>
   );

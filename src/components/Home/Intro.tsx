@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import HI1 from "/public/image/HI1.png";
 import HI2 from "/public/image/Vector.png";
 import { twMerge } from "tailwind-merge";
+import { usePathname, useRouter } from "next/navigation";
 const DataDisplay = ({ name, desc }: { name: string; desc: string }) => {
   return (
     <div>
@@ -20,6 +22,8 @@ const Decoratives = ({ size, position }: { size: any; position: any }) => {
   );
 };
 const Intro = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   return (
     <div className=" grid bg-offWhite px-[16px] py-[16px]">
       <div className=" space-y-2">
@@ -31,7 +35,12 @@ const Intro = () => {
           designed to bring out your individuality and cater to your sense of
           style.
         </p>
-        <button className=" btn btn-black">Shop Now</button>
+        <button
+          className=" btn btn-black"
+          onClick={() => router.push(`/category/casual`)}
+        >
+          Shop Now
+        </button>
         <div className="grid grid-cols-2 space-y-1 place-items-center">
           <DataDisplay name="200+" desc="International Brands" />
           <DataDisplay name="2,000+" desc="High-Quality Products" />
