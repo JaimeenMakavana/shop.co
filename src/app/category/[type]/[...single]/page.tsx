@@ -3,10 +3,12 @@ import { Reviews } from "@/Statics/Global";
 import { NewArrivalDataconst } from "@/components/Home/HomeStatic";
 import ShoppingCardComponent from "@/components/Home/NewArrival";
 import ReviewCard from "@/components/Review";
+import Image from "next/image";
 import React, { useState } from "react";
 import { CiSettings } from "react-icons/ci";
+import { Rating } from "react-simple-star-rating";
 
-const Rating = () => {
+const Ratings = () => {
   return (
     <div className=" px-4 space-y-3">
       <div className=" flex justify-between items-center mt-4">
@@ -69,7 +71,7 @@ const ProductDetails = () => {
         </p>
       </div>
       {SelectedTab === "product" && <ProductDetail />}
-      {SelectedTab === "rating" && <Rating />}
+      {SelectedTab === "rating" && <Ratings />}
       {SelectedTab === "faq" && <FAQ />}
     </div>
   );
@@ -79,6 +81,68 @@ const page = ({ params }: { params: any }) => {
   console.log("params::: ", params);
   return (
     <div className="py-[16px]">
+      <div className="min-[850px]:grid-cols-2 grid gap-5 p-4">
+        <div className="flex flex-col md:flex-row">
+          <div className="overflow-hidden rounded-xl p-1 sm:p-3 md:order-2">
+            <Image
+              src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              width={500}
+              height={500}
+              quality={100}
+              className="min-h-full min-w-full rounded-xl object-cover"
+            />
+          </div>
+          <div className="flex items-center justify-between p-1 sm:p-3 md:flex-col md:gap-2">
+            <div className="size-[100px] overflow-hidden rounded-xl">
+              <Image
+                src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                className="min-h-full min-w-full object-cover"
+                alt=""
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="size-[100px] overflow-hidden rounded-xl">
+              <Image
+                src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                className="min-h-full min-w-full object-cover"
+                alt=""
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="size-[100px] overflow-hidden rounded-xl">
+              <Image
+                src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                className="min-h-full min-w-full object-cover"
+                alt=""
+                width={500}
+                height={500}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1 className=" mHeading ">One Life Graphic T-shirt</h1>
+          <div className=" flex justify-start items-center gap-2">
+            <Rating size={20} />
+          </div>
+          <p>
+            {" "}
+            <span className="mHeading font-bold">$250 </span>{" "}
+            <span className=" mHeading text-gray-400 font-bold line-through decoration-gray-500 ">
+              $300
+            </span>
+          </p>
+          <p className=" text-gray-500 text-sm">
+            This graphic t-shirt which is perfect for any occasion. Crafted from
+            a soft and breathable fabric, it offers superior comfort and style.
+          </p>
+        </div>
+      </div>
+
       <div className=" flex justify-between items-center gap-2 py-4 mx-4 border-t">
         <p className="px-2 py-1 rounded-full bg-lightGrey">Small</p>
         <p className="px-2 py-1 rounded-full bg-lightGrey">Medium</p>

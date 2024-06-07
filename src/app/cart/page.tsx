@@ -94,7 +94,7 @@ const page = () => {
             <input
               type="text"
               placeholder="Add Promo Code"
-              className=" max-w-full focus:outline-none bg-lightGrey rounded-full py-[6px] pl-[30px]"
+              className="w-[180px] focus:outline-none bg-lightGrey rounded-full py-[6px] pl-[30px]"
             />
           </div>
           <button className=" btn btn-black btn-git px-2">Apply</button>
