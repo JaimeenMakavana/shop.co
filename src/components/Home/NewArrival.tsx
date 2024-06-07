@@ -24,7 +24,7 @@ export const ArrivalCard = ({
         onClick={() => router.push(`${pathname}/${data.title}`)}
       >
         <Image
-          src={ArrivalImg}
+          src={data?.imgSrc || ArrivalImg}
           width={200}
           height={200}
           alt="card"
