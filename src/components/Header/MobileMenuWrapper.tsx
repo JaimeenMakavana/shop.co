@@ -17,11 +17,13 @@ const MobileMenuWrapper = ({
         MobileToggle && "hidden"
       )}
     >
-      <div className={twMerge(` w-[60%] bg-white absolute inset-y-0 px-4`)}>
+      <div
+        className={twMerge(` w-[60%] bg-white absolute inset-y-0 pl-4 pr-2`)}
+      >
         <div className=" flex justify-end items-center">
           <IoCloseOutline
             onClick={() => setMobileToggle(!MobileToggle)}
-            className=" size-[20px]"
+            className=" size-[20px] cursor-pointer"
           />
         </div>
         {children}
