@@ -62,7 +62,7 @@ const ValueComp = ({
 
 const page = () => {
   return (
-    <div className="px-[16px] py-[16px]">
+    <div className="px-[16px] py-[16px] md:px-10">
       <Breadcrumb />
       <h1 className=" lHeading font-bold text-black  py-3">Your Cart</h1>
       <div className=" card border space-y-4 divide-y max-h-[520px] overflow-y-auto scrollRemove">
@@ -94,10 +94,10 @@ const page = () => {
             <input
               type="text"
               placeholder="Add Promo Code"
-              className="w-[180px] focus:outline-none bg-lightGrey rounded-full py-[6px] pl-[30px]"
+              className="w-[180px] focus:outline-none bg-lightGrey rounded-full py-[6px] pl-[30px] md:w-auto"
             />
           </div>
-          <button className=" btn btn-black btn-git px-2">Apply</button>
+          <button className=" btn btn-black w-fit px-2 md:px-5">Apply</button>
         </div>
         <button className=" btn btn-black inline-flex justify-center items-center gap-2">
           Go Check Out{" "}

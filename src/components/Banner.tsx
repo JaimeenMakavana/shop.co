@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const Banner = () => {
   return (
-    <div className="banner bg-black fixed top-0 inset-x-0 text-white inline-flex w-full justify-center items-center z-[5] py-[2px]">
+    <div className="banner bg-black fixed top-0 inset-x-0 text-white inline-flex w-full justify-center items-center z-[5] py-[2px] max-w-screen-xl mx-auto md:px-10">
       <Marquee className="text-xs mb-4">
         Sign up and get 20% off to your first order.
       </Marquee>

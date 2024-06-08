@@ -36,8 +36,8 @@ const Page = () => {
     setItemOffset(newOffset);
   };
   return (
-    <div className=" px-[16px] py-[16px]">
-      <h1 className="flex justify-between items-center sticky top-[67px] left-0 right-0 bg-white z-[1] border-b ">
+    <div className=" px-[16px] py-[16px] md:px-10">
+      <h1 className="flex justify-between items-center sticky top-[67px] left-0 right-0 bg-white z-[1] border-b">
         <span className=" inline-flex justify-start items-center gap-1">
           <span className=" lHeading text-black font-semibold">Casual </span>{" "}
           <span className=" text-gray-400 text-xs  ">
@@ -46,9 +46,13 @@ const Page = () => {
         </span>
         <BottomDrawer />
       </h1>
-      <div className="grid grid-cols-2 gap-4 my-5">
+      <div className="grid grid-cols-2 gap-4 my-5 md:grid-cols-4 md:gap-6">
         {currentItems.map((ele: any) => (
-          <ArrivalCard key={ele.id} data={ele} imageClass="!size-[140px]" />
+          <ArrivalCard
+            key={ele.id}
+            data={ele}
+            imageClass="!size-[140px] md:!size-[200px]"
+          />
         ))}
       </div>
       <ReactPaginate

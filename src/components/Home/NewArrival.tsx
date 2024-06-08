@@ -24,7 +24,7 @@ export const ArrivalCard = ({
         onClick={() => router.push(`${pathname}/${data.title}`)}
       >
         <Image
-          src={data?.imgSrc || ArrivalImg}
+          src={ArrivalImg}
           width={200}
           height={200}
           alt="card"
@@ -43,14 +43,18 @@ export const ArrivalCard = ({
 
 const ShoppingCardComponent = ({ name, data }: { name: string; data: any }) => {
   return (
-    <div className="px-[16px] py-[16px] space-y-2">
+    <div className="px-[16px] py-[16px] space-y-2 md:px-10">
       <h1 className="lHeading text-black text-center py-2">{name}</h1>
-      <div className=" flex justify-start overflow-x-scroll gap-3 scrollRemove">
+      <div className=" flex justify-start overflow-x-scroll gap-3 scrollRemove md:gap-6">
         {data.map((ele: any) => (
           <ArrivalCard key={ele.id} data={ele} />
         ))}
       </div>
-      <button className=" btn btn-border">View All</button>
+      <div className="md:flex md:justify-center  md:my-10">
+        <button className=" btn btn-border md:w-fit md:px-5 md:mx-auto">
+          View All
+        </button>
+      </div>
     </div>
   );
 };

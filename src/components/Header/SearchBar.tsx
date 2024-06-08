@@ -115,7 +115,7 @@ const SearchBar = () => {
           />
           <input
             type="text"
-            className=" w-[120px] pl-[26px] text-sm py-1 focus:outline-none border rounded-full bg-lightGrey"
+            className=" w-[120px] pl-[26px] text-sm py-1 focus:outline-none border rounded-full bg-lightGrey md:w-[250px]"
           />
         </div>
       )}

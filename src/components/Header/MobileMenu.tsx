@@ -13,7 +13,7 @@ const MobileMenu = () => {
     <div>
       <RxHamburgerMenu
         onClick={() => setMobileToggle(!MobileToggle)}
-        className=" cursor-pointer"
+        className=" cursor-pointer sm:hidden"
       />
       {/* menu*/}
       <MobileMenuWrapper

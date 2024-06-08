@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="outfit scrolls">
         <Banner />
         <Header />
-        <div className="mt-[70px]">{children}</div>
+        <div className="mt-[70px] max-w-screen-xl mx-auto">{children}</div>
         <Footer />
       </body>
     </html>

@@ -44,20 +44,20 @@ const BottomDrawer: React.FC = () => {
         placement="bottom"
         open={openBottom}
         onClose={closeDrawerBottom}
-        className="rounded-t-xl p-4"
+        className="rounded-t-xl p-4 border shadow-sm md:shadow-md"
         size={400}
         placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}
       >
         <>
-          <div className=" flex justify-between items-center shadow-sm">
+          <div className=" flex justify-between items-center shadow-sm md:px-10">
             <h1 className="mHeading">Filter</h1>
             <button onClick={() => setOpenBottom(!openBottom)}>
               <IoMdClose />
             </button>
           </div>
-          <div className="h-full w-full overflow-y-auto pb-6 scrollRemove">
+          <div className="h-full w-full overflow-y-auto pb-6 scrollRemove md:px-10">
             <div className=" space-y-1 py-5 border-b">
               {FilterOptionData?.map((ele: any, index: any) => {
                 return (
@@ -89,7 +89,11 @@ const BottomDrawer: React.FC = () => {
                 );
               })}
             </div>
-            <button className=" btn btn-black">Apply Filter</button>
+            <div className=" md:flex justify-center md:mt-5">
+              <button className=" btn btn-black md:w-fit md:px-5">
+                Apply Filter
+              </button>
+            </div>
           </div>
         </>
       </Drawer>

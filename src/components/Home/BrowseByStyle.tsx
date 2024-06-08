@@ -37,13 +37,15 @@ const DressCard = ({ name, url }: { name: string; url: any }) => {
 
 const BrowseByStyle = () => {
   return (
-    <div className=" mx-[16px] py-[16px] bg-lightGrey rounded-xl flex flex-col justify-center items-center space-y-2">
+    <div className=" mx-[16px] py-[16px] bg-lightGrey rounded-xl flex flex-col justify-center items-center space-y-2 md:mx-10">
       <h1 className=" lHeading text-black text-center font-bold">
         BROWSE BY dress STYLE
       </h1>
-      {DressCardData.map((card: any) => (
-        <DressCard key={card.id} name={card.name} url={card.url} />
-      ))}
+      <div className=" md:grid md:grid-cols-2 md:gap-6 xl:grid-cols-4">
+        {DressCardData.map((card: any) => (
+          <DressCard key={card.id} name={card.name} url={card.url} />
+        ))}
+      </div>
     </div>
   );
 };

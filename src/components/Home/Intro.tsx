@@ -4,6 +4,7 @@ import HI1 from "/public/image/HI1.png";
 import HI2 from "/public/image/Vector.png";
 import { twMerge } from "tailwind-merge";
 import { usePathname, useRouter } from "next/navigation";
+
 const DataDisplay = ({ name, desc }: { name: string; desc: string }) => {
   return (
     <div>
@@ -23,10 +24,10 @@ const Decoratives = ({ size, position }: { size: any; position: any }) => {
 };
 const Intro = () => {
   const router = useRouter();
-  const pathname = usePathname();
+
   return (
-    <div className=" grid bg-offWhite px-[16px] py-[16px]">
-      <div className=" space-y-2">
+    <div className=" grid bg-offWhite px-[16px] py-[16px] md:grid-cols-2 md:px-10">
+      <div className=" space-y-2 ">
         <h1 className=" lHeading text-black">
           FIND CLOTHES THAT MATCHES YOUR STYLE
         </h1>
@@ -36,15 +37,15 @@ const Intro = () => {
           style.
         </p>
         <button
-          className=" btn btn-black"
+          className=" btn btn-black md:w-fit md:px-5 md:my-5"
           onClick={() => router.push(`/category/casual`)}
         >
           Shop Now
         </button>
-        <div className="grid grid-cols-2 space-y-1 place-items-center">
+        <div className="grid grid-cols-2 space-y-1 place-items-center md:grid-cols-3">
           <DataDisplay name="200+" desc="International Brands" />
           <DataDisplay name="2,000+" desc="High-Quality Products" />
-          <div className=" col-span-full">
+          <div className=" col-span-full md:col-span-1">
             <DataDisplay name="30,000+" desc="Happy Customers" />
           </div>
         </div>
