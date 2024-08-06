@@ -21,6 +21,6 @@ const MobileMenuPage = ({
         ))}
     </div>
   );
-};
+}; 
 
 export default MobileMenuPage;
