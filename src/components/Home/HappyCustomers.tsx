@@ -44,7 +44,7 @@ const HappyCustomers = () => {
   const [CurrentReview, setCurrentReview] = useState(0);
 
   return (
-    <div className="p-[16px] space-y-4">
+    <div className="p-[16px] space-y-4 md:px-10">
       <ReviewHeader
         setCurrentReview={setCurrentReview}
         CurrentReview={CurrentReview}

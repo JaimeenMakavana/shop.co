@@ -29,7 +29,10 @@ const FooterData = [
 ];
 const Footer = () => {
   return (
-    <div className=" bg-lightGrey grid grid-cols-2 px-[16px] relative pt-[120px] mt-[150px]">
+    <div
+      className=" bg-lightGrey grid grid-cols-2 px-[16px] relative pt-[120px]
+     mt-[150px] max-w-screen-xl mx-auto md:px-10 md:grid-cols-4"
+    >
       <FooterCard />
       <div className="col-span-full flex flex-col justify-between py-4">
         <p className=" font-bold">SHOP.CO</p>

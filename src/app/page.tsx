@@ -9,7 +9,7 @@ import ShoppingCardComponent from "@/components/Home/NewArrival";
 
 export default function Home() {
   return (
-    <main>
+    <main className="">
       <Intro />
       <ShoppingCardComponent name="New Arrivals" data={NewArrivalDataconst} />
       <div className=" border-t border-gray-300 mt-4">

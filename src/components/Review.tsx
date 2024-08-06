@@ -2,7 +2,6 @@ import { MdOutlineDone } from "react-icons/md";
 import { Rating } from "react-simple-star-rating";
 
 const ReviewCard = ({ data }: { data: any }) => {
-  console.log("data::: ", data);
   return (
     <div className=" rounded-xl border border-gray-200 p-3 space-y-2 min-h-[192px]">
       <div className=" flex justify-start items-center gap-2">

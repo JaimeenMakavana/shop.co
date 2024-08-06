@@ -3,9 +3,11 @@ import { CiMail } from "react-icons/ci";
 
 const FooterCard = () => {
   return (
-    <div className="grid md:grid-cols-2 bg-black absolute -top-[120px] inset-x-[16px] card">
-      <h1 className="lHeading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
-      <div className=" space-y-2">
+    <div className="grid md:grid-cols-2 bg-black absolute -top-[120px] inset-x-[16px] md:mx-6 card md:-top-14 md:h-[150px]">
+      <h1 className="lHeading md:my-auto">
+        STAY UPTO DATE ABOUT OUR LATEST OFFERS
+      </h1>
+      <div className=" space-y-2 md:my-auto">
         <div className=" relative rounded-full overflow-hidden">
           <CiMail className=" absolute left-2 top-[10px]" />
           <input
